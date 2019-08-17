@@ -11,7 +11,117 @@
     </style>
 </head>
 <body>
-    <h1>Hello Github</h1>   
+    <h1>Hello Github</h1>  
+	### linux命令
+
+**grep**    查询文件中匹配的内容
+
+grep qqq a.txt  查询a.txt中的qqq       -c统计包含qqq的行数  -n显示行号   -v显示没有qqq的行  -i忽略大小写   
+
+grep qqq *  在当前目录下的所有文件中查询qqq   
+
+grep -r qqq *在当前目录及其子目录下的所有文件中查询qqq
+
+grep -r -l qqq *在当前目录及其子目录下查询包含qqq的文件，不显示具体的内容，只显示包含qqq的文件
+
+cat  1.txt  2.txt|grep qqq 在1.txt,2.txt中查询qqq 
+
+**find**  查询匹配的文件
+
+  find -name  "1.txt"  在当前目录下查找文件名为1.txt的文件   可通配  
+
+find -name  "*.txt" 在当前目录下查找所有以.txt结尾的文件   [a-z] [A-Z]  [0-9]
+
+find /home -name "1.txt" 在/home 目录下查找名为1.txt的文件
+
+find -name "1.txt" -fprnt file查找名为1.txt的文件并将结果输出到file文件里
+
+find  -mtime -2查找两天内改过的文件
+
+find -atime  -2查找两天内访问过的文件
+
+find  -mtime +2查找两天前改过的文件
+
+find -mmin -60查找60分钟内改过内容的文件
+
+find -mmin  +60查找60分钟之前改过内容的文件
+
+find -empty查找空文件或空文件夹		
+
+**用户管理和权限管理**
+
+- 用户名和 UID 被保存在`/etc/passwd`文件中，文件权限 `(-rw-r--r--)`
+- 组和GID 被保存在 `/etc/group`文件中，文件权限`(-r--------)`
+- 用户口令(密码)被保存在 `/etc/shadow`文件中  ，文件权限`(-rw-r--r-- )`
+- 组口令被保存在 `/etc/gshadow`文件中 ，文件权限 `(-r--------)`
+
+当创建一个新用户的时候
+
+- 用户名和 UID 被保存在 `/etc/passwd` 这个文件中，用户的口令通常用`shadow passwords`保护
+- 当用户登录时，他们**被分配了一个主目录和一个运行的程序**（通常是 shell）
+- 若没有指定他所属于的组，RHEL/CentOS就建立一个和**该用户同名的私有组**，且用户被分配到这个私有组中
+
+一个用户可以属于多个组：主组/附加组
+
+*<u>cut -d':' -f 1 /etc/passwd     在/etc/passwd文件下通过:来将每行分割为若干元素   其中cut -d ':'表示用：来分割</u>*
+
+<u>*-f  1表示显示每行分割后的第一个元素。结果为显示所有的用户名*</u>
+
+groups  pxq查询用户pxq属于哪些组	(不加pxq默认当前用户)
+
+members  pxq  查询组pxq下有哪些用户 （需要额外安装members包  sudo apt-get install members）
+
+id  pxq查看用户pxq信息
+
+useradd/adduser pxq  添加用户pxq
+
+passwd pxq 为用户pxq设置密码
+
+userdel pxq 删除用户pxq
+
+groupadd zxd添加组zxd
+
+usermod -G  zxd pxq将用户pxq添加到组zxd中
+
+gpasswd -a pxq zxd将用户pxq 添加到组zxd中
+
+gpasswd -d pxq zxd将用户pxq 从组zxd中删除
+
+usermod -aG 111,222,333   1将用户1添加到组111,222,333中
+
+chmod -R 777 share将share文件夹及其下所有内容的权限都改为777  (r-w-x)(一般文件夹都有x权限，文件没有)
+
+chown  pxq 1.txt将1.txt的所有者换成pxq
+
+chgrp pxq 1.txt  将1.txt所属用户组换成pxq
+
+usermod -G pxq,zxd  qqq将用户qqq添加到pxq和zxd两个组   （用户1可以加到用户2的私有组  ）
+
+**打包和压缩、解压缩**
+
+**tar**
+
+tar -cvf  1.tar a.txt b.txt 将a.txt,b.txt打包成1.tar放在当前目录下
+
+tar -zcvf 1.tar.gz  a.txt b.txt 将a.txt b.txt 打成压缩包1.tar.gz放在当前目录下
+
+tar -tvf  1.tar查看1.tar中文件
+
+tar -ztvf 1.tar.gz查看1.tar.gz中文件
+
+tar -xvf  1.tar将1.tar文件提取出来
+
+tar  -zxvf 1.tar.gz将1.tar.gz解压缩并提取出来（提取到当前文件夹）
+
+tar  -zxvf 1.tar.gz  a.txt  只将1.tar.gz下的a.txt提取出来
+
+tar --exclude ./a.txt -zcvf 1.tar.gz ./*将当前目录下除a.txt文件全部压缩到1.tar.gz 
+
+**df  du  fdisk   mount**
+
+**awk   sed**
+
+
 </body>
 </html>
 

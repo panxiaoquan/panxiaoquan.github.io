@@ -6,10 +6,19 @@
     <description>Recent content in Posts on panxiaoquan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Oct 2021 17:25:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Oct 2021 17:26:03 +0800</lastBuildDate>
     
 	<atom:link href="https://panxiaoquan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Study Golang</title>
+      <link>https://panxiaoquan.github.io/posts/study-golang/</link>
+      <pubDate>Sun, 03 Oct 2021 17:26:03 +0800</pubDate>
+      
+      <guid>https://panxiaoquan.github.io/posts/study-golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Kube Virt</title>

@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://panxiaoquan.github.io/categories/</loc>
-    <lastmod>2021-10-03T17:25:48+08:00</lastmod>
+    <loc>https://panxiaoquan.github.io/</loc>
+    <lastmod>2021-10-03T17:26:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://panxiaoquan.github.io/tags/cloud/</loc>
+    <loc>https://panxiaoquan.github.io/posts/</loc>
+    <lastmod>2021-10-03T17:26:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxiaoquan.github.io/posts/study-golang/</loc>
+    <lastmod>2021-10-03T17:26:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxiaoquan.github.io/categories/</loc>
     <lastmod>2021-10-03T17:25:48+08:00</lastmod>
   </url>
   
@@ -18,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://panxiaoquan.github.io/tags/k8s/</loc>
+    <loc>https://panxiaoquan.github.io/tags/cloud/</loc>
     <lastmod>2021-10-03T17:25:48+08:00</lastmod>
   </url>
   
@@ -28,17 +38,12 @@
   </url>
   
   <url>
+    <loc>https://panxiaoquan.github.io/tags/k8s/</loc>
+    <lastmod>2021-10-03T17:25:48+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://panxiaoquan.github.io/posts/kube-virt/</loc>
-    <lastmod>2021-10-03T17:25:48+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://panxiaoquan.github.io/</loc>
-    <lastmod>2021-10-03T17:25:48+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://panxiaoquan.github.io/posts/</loc>
     <lastmod>2021-10-03T17:25:48+08:00</lastmod>
   </url>
   
